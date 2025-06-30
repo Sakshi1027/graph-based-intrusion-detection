@@ -1,5 +1,5 @@
 # PyTorch and PyG (CPU versions)
-torch==2.0.1+cpu -f https://download.pytorch.org/whl/torch_stable.html
+torch==2.7.1+cpu -f https://download.pytorch.org/whl/torch_stable.html
 torch-scatter -f https://data.pyg.org/whl/torch-2.0.1+cpu.html
 torch-sparse -f https://data.pyg.org/whl/torch-2.0.1+cpu.html
 torch-geometric
