@@ -1,7 +1,11 @@
-torch>=2.0.0
-torch-geometric>=2.3.0
-torch-scatter>=2.1.0
-torch-sparse>=0.6.0
+# PyTorch + PyG CPU version
+https://download.pytorch.org/whl/torch_stable.html
+torch==2.0.1+cpu
+torch-scatter -f https://data.pyg.org/whl/torch-2.0.1+cpu.html
+torch-sparse -f https://data.pyg.org/whl/torch-2.0.1+cpu.html
+torch-geometric
+
+# Other dependencies
 networkx>=3.0
 pandas>=1.5.0
 numpy>=1.21.0
@@ -17,4 +21,4 @@ streamlit>=1.25.0
 fastapi>=0.100.0
 uvicorn>=0.22.0
 python-multipart>=0.0.6
-aiofiles>=23.0.0 
+aiofiles>=23.0.0
