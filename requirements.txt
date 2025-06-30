@@ -1,12 +1,12 @@
-# PyTorch + PyG CPU version
-https://download.pytorch.org/whl/torch_stable.html
-torch==2.0.1+cpu
+# PyTorch and PyG (CPU versions)
+torch==2.0.1+cpu -f https://download.pytorch.org/whl/torch_stable.html
 torch-scatter -f https://data.pyg.org/whl/torch-2.0.1+cpu.html
 torch-sparse -f https://data.pyg.org/whl/torch-2.0.1+cpu.html
 torch-geometric
 
-# Other dependencies
-networkx>=3.0
+# Your other packages
+streamlit>=1.25.0
+flask>=2.3.0
 pandas>=1.5.0
 numpy>=1.21.0
 scikit-learn>=1.1.0
@@ -16,8 +16,6 @@ gradio>=4.0.0
 plotly>=5.0.0
 dash>=2.8.0
 dash-bootstrap-components>=1.4.0
-flask>=2.3.0
-streamlit>=1.25.0
 fastapi>=0.100.0
 uvicorn>=0.22.0
 python-multipart>=0.0.6
