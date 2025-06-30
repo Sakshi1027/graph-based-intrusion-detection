@@ -1,0 +1,17 @@
+Source IP,Destination IP,Source Port,Destination Port,Protocol,Flow Duration,Total Fwd Packets,Total Backward Packets,Total Length of Fwd Packets,Total Length of Bwd Packets,Timestamp,Packet Length Mean,Packet Length Std,Label
+# Pattern 0: Internal host to multiple external hosts on suspicious ports
+192.168.10.1,8.8.8.8,12345,8080,6,1000,10,8,500,400,2024-06-29 19:00:00,250,15,ATTACK
+192.168.10.1,1.1.1.1,12346,8080,6,1100,12,9,520,410,2024-06-29 19:00:01,260,16,ATTACK
+192.168.10.1,9.9.9.9,12347,8080,6,1200,11,10,530,420,2024-06-29 19:00:02,270,17,ATTACK
+# Pattern 1: External host to multiple internal hosts (from hardcoded list)
+8.8.4.4,192.168.10.10,23451,80,6,900,8,7,480,390,2024-06-29 19:00:03,240,14,ATTACK
+8.8.4.4,192.168.10.14,23452,80,6,950,9,8,490,395,2024-06-29 19:00:04,245,13,ATTACK
+8.8.4.4,192.168.10.16,23453,80,6,980,10,9,495,398,2024-06-29 19:00:05,250,12,ATTACK
+# Some benign traffic
+192.168.10.3,208.67.222.222,23456,53,17,1500,8,7,600,500,2024-06-29 19:00:06,200,10,BENIGN
+192.168.10.5,185.167.164.39,34567,22,6,1200,12,10,610,510,2024-06-29 19:00:07,210,11,BENIGN
+192.168.10.8,74.125.192.156,45678,443,6,1800,14,13,620,520,2024-06-29 19:00:08,220,12,BENIGN
+192.168.10.9,23.194.142.69,56789,3389,6,1100,9,8,630,530,2024-06-29 19:00:09,230,13,BENIGN
+
+df['Source IP'] = df['Source IP'].fillna('0.0.0.0').astype(str)
+df['Destination IP'] = df['Destination IP'].fillna('0.0.0.0').astype(str) 
