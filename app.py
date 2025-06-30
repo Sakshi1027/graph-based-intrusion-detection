@@ -9,9 +9,9 @@ import os
 # Add the current directory to path to import our modules
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
-from models.gcn_model import IntrusionDetector
-from utils.data_processor import DataProcessor
-from utils.visualizer import GraphVisualizer
+from gcn_model import IntrusionDetector
+from data_processor import DataProcessor
+from visualizer import GraphVisualizer
 
 # Page configuration
 st.set_page_config(
